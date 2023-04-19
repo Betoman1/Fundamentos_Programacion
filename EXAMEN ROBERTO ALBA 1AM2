@@ -1,0 +1,21 @@
+//Tabla de depreciaciones
+#include <stdio.h>
+int main(){
+    int i, a;
+    float DA=0, D=0, VA=0, costo, vidautil, valorrescate;
+    printf("Ingresa el año de su auto: ");
+    scanf("%d", &a);
+    printf("Cual es el valor de tu auto: ");
+    scanf("%f", &costo);
+    printf("Cual es la vida util de el año: ");
+    scanf("%f", &vidautil);
+    printf("Cual es el valor de recuperacion: ");
+    scanf("%f", &valorrescate);
+    D = costo - valorrescate / vidautil;
+    DA = D + D;
+    VA = costo + valorrescate;
+    for (i=1; i<=vidautil; i++) {
+        printf("% i año: %d Depreciaciòn: %.1f Depreciaciòn acumulada: %.1f Valor anual: %.1f\n", i, a+i, D, DA, VA);
+    }    
+    return 0;
+}
